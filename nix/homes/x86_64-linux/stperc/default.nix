@@ -11,6 +11,7 @@ with lib.garf;
   garf = {
     apps.helix = enabled;
     tools = {
+      direnv = enabled;
       eza = enabled;
     };
   };
