@@ -13,6 +13,8 @@ with lib.garf;
     tools = {
       direnv = enabled;
       eza = enabled;
+      fzf = enabled;
+      zoxide = enabled;
     };
   };
 
