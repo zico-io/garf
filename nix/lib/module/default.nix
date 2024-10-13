@@ -3,20 +3,26 @@
 with lib;
 
 rec {
-  mkOpt = type: default: description:
-    mkOption {inherit type default description;};
+  mkOpt =
+    type: default: description:
+    mkOption { inherit type default description; };
 
   mkOpt' = type: default: mkOpt type default null;
 
   mkBoolOpt = mkOpt types.bool;
-  
+
   mkBoolOpt' = mkOpt' types.bool;
 
-  enabled = { enable = true; };
-  disabled = { enable = false; };
+  enabled = {
+    enable = true;
+  };
+  disabled = {
+    enable = false;
+  };
 
-  override-meta = meta: package:
+  override-meta =
+    meta: package:
     package.overrideAttrs (attrs: {
-      meta = (attrs.meta or {}) // meta;
+      meta = (attrs.meta or { }) // meta;
     });
 }

@@ -1,4 +1,10 @@
-{ lib, config, pkgs, inputs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 with lib;
 with lib.garf;
 {
@@ -9,7 +15,7 @@ with lib.garf;
     };
   };
 
-    programs.zsh = enabled;
+  programs.zsh = enabled;
 
   home = {
     stateVersion = "23.11";
