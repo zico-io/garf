@@ -1,11 +1,11 @@
 keys:
   - &users:
-    - &stperc age1gcu5608eka28zx52msyw6xa95z2x0kmp5jf4xns0lmwer4z8ypeqmq935t
+    - &stperc age1jw9femu65f3kc6gmw7waret0prevaqq6xym72rzg5vxlrn890e8q2jcpu0
   - &hosts:
-    - &hydrogen age1shaknal49hptz64zhy6npkknlxy8903mj4y476u4gm3tld9r4cvsk30h8w
+    - &titanium age18dqq72u8ddpju0cr7uzke34js2l74qw0gn66fmk5z37acwxsffesz8q08g
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
     - age:
       - *stperc
-      - *hydrogen
+      - *titanium
