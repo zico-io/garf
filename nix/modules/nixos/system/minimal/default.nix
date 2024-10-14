@@ -22,11 +22,11 @@ in
 
     services.openssh = {
       enable = true;
-      settings = {
-        PasswordAuthentication = false;
-        KbdInteractiveAuthentication = false;
-        PermitRootLogin = "no";
-      };
+      # settings = {
+      #   PasswordAuthentication = false;
+      #   KbdInteractiveAuthentication = false;
+      #   PermitRootLogin = "no";
+      # };
     };
 
     security.sudo.wheelNeedsPassword = false;

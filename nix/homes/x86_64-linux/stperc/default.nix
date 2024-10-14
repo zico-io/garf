@@ -20,11 +20,13 @@ with lib.garf;
 
   programs = {
     zsh = enabled;
-    ssh.matchBlocks = {
-      "github.com" = {
-        hostname = "github.com";
-        user = "git";
-        identityFile = "${config.garf.user.home}/.ssh/id_git";
+    ssh = {
+      enable = true;
+      matchBlocks = {
+        "github.com" = {
+          user = "git";
+          identityFile = "/home/stperc/.ssh/id_stperc";
+        };
       };
     };
   };

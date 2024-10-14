@@ -26,6 +26,7 @@ in
 
       secrets = {
         "users/${user.name}/ssh_key" = {
+          owner = user.name;
           path = "/home/${user.name}/.ssh/id_${user.name}";
         };
       };
