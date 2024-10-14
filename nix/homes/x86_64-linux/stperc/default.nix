@@ -18,7 +18,16 @@ with lib.garf;
     };
   };
 
-  programs.zsh = enabled;
+  programs = {
+    zsh = enabled;
+    ssh.matchBlocks = {
+      "github.com" = {
+        hostname = "github.com";
+        user = "git";
+        identityFile = "${config.garf.user.home}/.ssh/id_git";
+      };
+    };
+  };
 
   home = {
     stateVersion = "23.11";
